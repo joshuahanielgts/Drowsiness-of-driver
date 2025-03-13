@@ -1,14 +1,19 @@
 Driver Drowsiness Detection System: A Computer Vision Approach for Enhanced Road Safety
-Abstract
+
+Abstract:
+
 Driver drowsiness is a critical factor in road accidents worldwide. In this work, we present a real-time drowsiness detection system that leverages computer vision techniques to monitor driver alertness. Our method employs a Python-based implementation using OpenCV for video capture and Dlib’s 68-point facial landmark detector to extract eye regions. By computing the Eye Aspect Ratio (EAR), the system classifies driver states into active, drowsy, or sleeping. Experimental evaluations demonstrate the feasibility of our approach in varying lighting conditions and driver poses, providing an effective low-cost solution for real-time monitoring and alert generation.
 
-1. Introduction
+1. Introduction:
+   
 Road safety is a global challenge, with driver drowsiness contributing to a significant proportion of vehicular accidents. Traditional approaches to detecting driver fatigue often rely on invasive sensors or subjective self-reporting. With advancements in computer vision and machine learning, non-intrusive camera-based systems have emerged as a promising alternative. In this paper, we detail the design and implementation of a Driver Drowsiness Detection System, which monitors eye behavior to assess alertness and issue timely warnings. The system aims to reduce accident risks by continuously analyzing visual cues and triggering alerts when signs of drowsiness are detected.
 
-2. Related Work
+2. Related Work:
+   
 Recent studies in driver monitoring have focused on various modalities for drowsiness detection. Early approaches centered on blink rate analysis and the Percentage of Eyelid Closure over Time (PERCLOS) metric. More recent work has incorporated deep learning techniques and multimodal sensors to enhance detection accuracy. Notably, methods using facial landmarks for eye tracking have shown promise due to their balance between computational efficiency and reliability. Our approach builds upon these prior works by implementing a lightweight and real-time system that utilizes the Eye Aspect Ratio (EAR) for drowsiness assessment.
 
-3. Methodology
+3. Methodology:
+   
 The proposed system comprises several modules that work in tandem to ensure robust detection of driver drowsiness:
 
 3.1 Data Acquisition

@@ -58,12 +58,15 @@ Response Time: The latency from the onset of drowsiness to alert generation.
 Initial results indicate that the system successfully detected drowsiness with high accuracy in well-lit conditions. While performance decreased slightly under low-light conditions, the EAR-based approach maintained an acceptable false positive rate. Optimization of camera placement and additional pre-processing techniques are being investigated to further enhance performance.
 
 5. Discussion
+   
 The proposed method demonstrates the potential of computer vision for non-invasive driver monitoring. Although the EAR provides a reliable measure of eye closure, factors such as occlusions (e.g., eyewear) and extreme head poses can affect accuracy. Future work may incorporate complementary features—such as head pose estimation and multimodal sensor fusion—to improve robustness under challenging conditions. Moreover, real-world deployment will require further validation on larger and more diverse datasets.
 
-6. Conclusion
+7. Conclusion
+
 We have presented a Driver Drowsiness Detection System that leverages real-time video processing and facial landmark analysis to enhance road safety. By focusing on the eye aspect ratio, the system provides a computationally efficient means to monitor driver alertness and issue timely warnings. Ongoing improvements include enhanced robustness in varied environments and integration with vehicle control systems. This research underlines the feasibility of low-cost, camera-based drowsiness detection as an effective tool in reducing road accidents.
 
-7. References
+8. References
+
 Szeliski, R. (2010). Computer Vision: Algorithms and Applications. Springer.
 Viola, P., & Jones, M. (2001). Rapid object detection using a boosted cascade of simple features. Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition.
 Soukupová, T., & Čech, J. (2016). Real-Time Eye Blink Detection using Facial Landmarks. Proceedings of the 21st Conference of the Czech Neural Network Symposium. Retrieved from 

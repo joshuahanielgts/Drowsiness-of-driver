@@ -22,7 +22,6 @@ A standard webcam or an in-cabin camera is used to capture continuous video fram
 3.2 Facial Landmark Detection
 We utilize Dlib’s pre-trained 68-point facial landmark detector to locate key facial features. In particular, the detector focuses on the eye regions, providing coordinates for landmarks that delineate the upper and lower eyelids. Dlib's facial landmark detector estimates the location of 68 (x, y)-coordinates that map to facial structures on the face, including the eyes, eyebrows, nose, and mouth 
 DLIB.NET
-.
 
 3.3 Eye Aspect Ratio (EAR) Calculation
 The EAR is computed using the Euclidean distances between specific eye landmarks. Mathematically, the ratio is defined as:
@@ -31,7 +30,6 @@ The EAR is computed using the Euclidean distances between specific eye landmarks
 
 where p₁ through p₆ represent selected points along the eye contour. This ratio remains nearly constant when the eyes are open and falls significantly when they close. The EAR requires only basic calculations based on the ratio of the distances between the eye's facial landmarks, making it a simple yet effective measure for blink detection 
 MDPI.COM
-.
 
 3.4 Drowsiness Detection Criteria
 A threshold is defined for the EAR below which the system considers the eyes to be closed. Consecutive frames with EAR values under this threshold indicate potential drowsiness. The system classifies the driver’s state as follows:
@@ -39,12 +37,13 @@ A threshold is defined for the EAR below which the system considers the eyes to 
 Active: EAR remains above the threshold.
 Drowsy: EAR falls below the threshold for a predetermined number of frames.
 Sleeping: EAR remains continuously low, triggering an immediate alert.
+
 3.5 Alert Mechanism
 When the drowsiness condition is met, the system triggers an alert (visual and/or audible) to prompt the driver to take corrective action. This mechanism is designed to be non-intrusive while ensuring timely feedback.
 
-Figure 1 illustrates the overall system architecture and processing pipeline.
 
 4. Experimental Evaluation
+   
 4.1 Setup
 The system was tested under diverse lighting conditions and driver orientations to evaluate its robustness. A series of controlled experiments were conducted in simulated driving environments with varying illumination and head movements.
 
@@ -54,6 +53,7 @@ Evaluation metrics included:
 Detection Accuracy: The rate at which the system correctly identifies drowsiness.
 False Positive Rate: Incidences of false alerts during normal driving.
 Response Time: The latency from the onset of drowsiness to alert generation.
+
 4.3 Results
 Initial results indicate that the system successfully detected drowsiness with high accuracy in well-lit conditions. While performance decreased slightly under low-light conditions, the EAR-based approach maintained an acceptable false positive rate. Optimization of camera placement and additional pre-processing techniques are being investigated to further enhance performance.
 

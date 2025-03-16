@@ -6,7 +6,7 @@ Driver drowsiness is a critical factor in road accidents worldwide. In this work
 
 1. Introduction:
    
-Road safety is a global challenge, with driver drowsiness contributing to a significant proportion of vehicular accidents. Traditional approaches to detecting driver fatigue often rely on invasive sensors or subjective self-reporting. With advancements in computer vision and machine learning, non-intrusive camera-based systems have emerged as a promising alternative. In this paper, we detail the design and implementation of a Driver Drowsiness Detection System, which monitors eye behavior to assess alertness and issue timely warnings. The system aims to reduce accident risks by continuously analyzing visual cues and triggering alerts when signs of drowsiness are detected.
+Road safety is a global challenge, with driver drowsiness contributing to many vehicular accidents. Traditional approaches to detecting driver fatigue often rely on invasive sensors or subjective self-reporting. With advancements in computer vision and machine learning, non-intrusive camera-based systems have emerged as a promising alternative. In this paper, we detail the design and implementation of a Driver Drowsiness Detection System, which monitors eye behavior to assess alertness and issue timely warnings. The system aims to reduce accident risks by continuously analyzing visual cues and triggering alerts when signs of drowsiness are detected.
 
 2. Related Work:
    
@@ -20,7 +20,7 @@ The proposed system comprises several modules that work in tandem to ensure robu
 A standard webcam or an in-cabin camera is used to capture continuous video frames. The real-time video stream is processed frame-by-frame using OpenCV, which also handles image pre-processing tasks such as grayscale conversion and normalization.
 
 3.2 Facial Landmark Detection
-We utilize Dlib’s pre-trained 68-point facial landmark detector to locate key facial features. In particular, the detector focuses on the eye regions, providing coordinates for landmarks that delineate the upper and lower eyelids. Dlib's facial landmark detector estimates the location of 68 (x, y)-coordinates that map to facial structures on the face, including the eyes, eyebrows, nose, and mouth 
+We utilize Dlib’s pre-trained 68-point facial landmark detector to locate key facial features. In particular, the detector focuses on the eye regions, providing coordinates for landmarks delineating the upper and lower eyelids. Dlib's facial landmark detector estimates the location of 68 (x, y)-coordinates that map to facial structures on the face, including the eyes, eyebrows, nose, and mouth 
 DLIB.NET
 
 3.3 Eye Aspect Ratio (EAR) Calculation
@@ -41,7 +41,6 @@ Sleeping: EAR remains continuously low, triggering an immediate alert.
 3.5 Alert Mechanism
 When the drowsiness condition is met, the system triggers an alert (visual and/or audible) to prompt the driver to take corrective action. This mechanism is designed to be non-intrusive while ensuring timely feedback.
 
-
 4. Experimental Evaluation
    
 4.1 Setup
@@ -61,11 +60,11 @@ Initial results indicate that the system successfully detected drowsiness with h
    
 The proposed method demonstrates the potential of computer vision for non-invasive driver monitoring. Although the EAR provides a reliable measure of eye closure, factors such as occlusions (e.g., eyewear) and extreme head poses can affect accuracy. Future work may incorporate complementary features—such as head pose estimation and multimodal sensor fusion—to improve robustness under challenging conditions. Moreover, real-world deployment will require further validation on larger and more diverse datasets.
 
-7. Conclusion
+6. Conclusion
 
 We have presented a Driver Drowsiness Detection System that leverages real-time video processing and facial landmark analysis to enhance road safety. By focusing on the eye aspect ratio, the system provides a computationally efficient means to monitor driver alertness and issue timely warnings. Ongoing improvements include enhanced robustness in varied environments and integration with vehicle control systems. This research underlines the feasibility of low-cost, camera-based drowsiness detection as an effective tool in reducing road accidents.
 
-8. References
+7. References
 
 Szeliski, R. (2010). Computer Vision: Algorithms and Applications. Springer.
 Viola, P., & Jones, M. (2001). Rapid object detection using a boosted cascade of simple features. Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition.
